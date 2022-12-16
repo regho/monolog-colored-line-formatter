@@ -1,0 +1,36 @@
+{
+	"name": "iBee PHP DevContainer",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "app",
+	"runArgs": [
+		"--name=ibee_synchro",
+		"--net=development"
+	],
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
+	"workspaceFolder": "/app",
+	"extensions": [
+		"streetsidesoftware.code-spell-checker",
+		"mintlify.document",
+		"xdebug.php-debug",
+		"xdebug.php-pack",
+		"persoderlind.vscode-phpcbf",
+		"kokororin.vscode-phpfmt",
+		"MS-CEINTL.vscode-language-pack-es",
+		"mikestead.dotenv",
+		"usernamehw.errorlens",
+		"piotrpalarz.vscode-gitignore-generator",
+		"adpyke.codesnap",
+		"teledemic.branch-warnings",
+		"donjayamanne.githistory",
+		"lamartire.git-indicators",
+		"codezombiech.gitignore",
+		"VisualStudioExptTeam.intellicode-api-usage-examples",
+		"kevin-deelen.templategenerator",
+		"Gruntfuggly.todo-tree"
+	],
+	"postCreateCommand": ".devcontainer/init.sh"
+}

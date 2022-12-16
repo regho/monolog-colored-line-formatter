@@ -1,12 +1,12 @@
 {
-    "name": "regho/monolog-colored-line-formatter",
+    "name": "regho/monolog-colorized-formatter",
     "description": "Colored Line Formatter for Monolog",
     "license": "MIT",
     "authors": [
         {
-            "name": "Bramus Van Damme",
-            "email": "bramus@bram.us",
-            "homepage": "https://www.bram.us/"
+            "name": "Regho",
+            "email": "info@regho.com",
+            "homepage": "https://www.regho.com/"
         }
     ],
     "require": {
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bramus\\Monolog\\": "src/"
+            "Regho\\Monolog\\": "src/"
         }
     },
     "scripts": {

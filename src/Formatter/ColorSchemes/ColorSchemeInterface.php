@@ -1,6 +1,6 @@
 <?php
 
-namespace Bramus\Monolog\Formatter\ColorSchemes;
+namespace Regho\Monolog\Formatter\ColorSchemes;
 
 interface ColorSchemeInterface
 {

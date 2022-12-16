@@ -1,6 +1,6 @@
 <?php
 
-namespace Bramus\Monolog\Formatter\ColorSchemes;
+namespace Regho\Monolog\Formatter\ColorSchemes;
 
 use Monolog\Level;
 use Bramus\Ansi\ControlSequences\EscapeSequences\Enums\SGR;

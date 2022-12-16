@@ -1,15 +1,15 @@
 # Monolog Colored Line Formatter
 
-[![Build Status](https://github.com/bramus/monolog-colored-line-formatter/workflows/CI/badge.svg)](https://github.com/bramus/monolog-colored-line-formatter/actions) [![Source](http://img.shields.io/badge/source-bramus/monolog--colored--line--formatter-blue.svg?style=flat-square)](https://github.com/bramus/monolog-colored-line-formatter) [![Supported PHP Versions](https://img.shields.io/packagist/php-v/bramus/monolog-colored-line-formatter)](https://github.com/bramus/monolog-colored-line-formatter) [![Version](https://img.shields.io/packagist/v/bramus/monolog-colored-line-formatter.svg?style=flat-square)](https://packagist.org/packages/bramus/monolog-colored-line-formatter) [![Downloads](https://img.shields.io/packagist/dt/bramus/monolog-colored-line-formatter.svg?style=flat-square)](https://packagist.org/packages/bramus/monolog-colored-line-formatter/stats) [![License](https://img.shields.io/packagist/l/bramus/monolog-colored-line-formatter.svg?style=flat-square)](https://github.com/bramus/monolog-colored-line-formatter/blob/master/LICENSE.txt)
+[![Build Status](https://github.com/Regho/monolog-colored-line-formatter/workflows/CI/badge.svg)](https://github.com/Regho/monolog-colored-line-formatter/actions) [![Source](http://img.shields.io/badge/source-Regho/monolog--colored--line--formatter-blue.svg?style=flat-square)](https://github.com/Regho/monolog-colored-line-formatter) [![Supported PHP Versions](https://img.shields.io/packagist/php-v/Regho/monolog-colored-line-formatter)](https://github.com/Regho/monolog-colored-line-formatter) [![Version](https://img.shields.io/packagist/v/Regho/monolog-colored-line-formatter.svg?style=flat-square)](https://packagist.org/packages/Regho/monolog-colored-line-formatter) [![Downloads](https://img.shields.io/packagist/dt/Regho/monolog-colored-line-formatter.svg?style=flat-square)](https://packagist.org/packages/Regho/monolog-colored-line-formatter/stats) [![License](https://img.shields.io/packagist/l/Regho/monolog-colored-line-formatter.svg?style=flat-square)](https://github.com/Regho/monolog-colored-line-formatter/blob/master/LICENSE.txt)
 
 A Formatter for Monolog with color support
-Built by Bramus! - [https://www.bram.us/](https://www.bram.us/)
+Built by Regho! - [https://www.bram.us/](https://www.bram.us/)
 
 ## About
 
-`bramus/monolog-colored-line-formatter` is a formatter for use with [Monolog](https://github.com/Seldaek/monolog). It augments the [Monolog LineFormatter](https://github.com/Seldaek/monolog/blob/master/src/Monolog/Formatter/LineFormatter.php) by adding color support. To achieve this `bramus/monolog-colored-line-formatter` uses ANSI Escape Sequences – [provided by `bramus/ansi-php`](https://github.com/bramus/ansi-php) – which makes it perfect for usage on text based terminals (viz. the shell).
+`Regho/monolog-colored-line-formatter` is a formatter for use with [Monolog](https://github.com/Seldaek/monolog). It augments the [Monolog LineFormatter](https://github.com/Seldaek/monolog/blob/master/src/Monolog/Formatter/LineFormatter.php) by adding color support. To achieve this `Regho/monolog-colored-line-formatter` uses ANSI Escape Sequences – [provided by `Regho/ansi-php`](https://github.com/Regho/ansi-php) – which makes it perfect for usage on text based terminals (viz. the shell).
 
-`bramus/monolog-colored-line-formatter` ships with a default color scheme, yet it can be adjusted to fit your own needs.
+`Regho/monolog-colored-line-formatter` ships with a default color scheme, yet it can be adjusted to fit your own needs.
 
 ## Prerequisites/Requirements
 
@@ -25,23 +25,23 @@ Installation is possible using Composer.
 Install `monolog-colored-line-formatter`, compatible with Monolog 2.x:
 
 ```bash
-composer require bramus/monolog-colored-line-formatter ~3.0
+composer require Regho/monolog-colored-line-formatter ~3.0
 ```
 
 Install `monolog-colored-line-formatter`, compatible with Monolog 1.x:
 
 ```bash
-composer require bramus/monolog-colored-line-formatter ~2.0
+composer require Regho/monolog-colored-line-formatter ~2.0
 ```
 
 ## Usage
 
-Create an instance of `\Bramus\Monolog\Formatter\ColoredLineFormatter` and set it as the formatter for the `\Monolog\Handler\StreamHandler` that you use with your `\Monolog\Logger` instance.
+Create an instance of `\Regho\Monolog\Formatter\ColoredLineFormatter` and set it as the formatter for the `\Monolog\Handler\StreamHandler` that you use with your `\Monolog\Logger` instance.
 
 ```php
 use \Monolog\Logger;
 use \Monolog\Handler\StreamHandler;
-use \Bramus\Monolog\Formatter\ColoredLineFormatter;
+use \Regho\Monolog\Formatter\ColoredLineFormatter;
 
 $log = new Logger('DEMO');
 $handler = new StreamHandler('php://stdout', Logger::WARNING);
@@ -72,8 +72,8 @@ To activate a color scheme pass it as the first argument of the `ColoredLineForm
 ```php
 use \Monolog\Logger;
 use \Monolog\Handler\StreamHandler;
-use \Bramus\Monolog\Formatter\ColoredLineFormatter;
-use \Bramus\Monolog\Formatter\ColorSchemes\TrafficLight;
+use \Regho\Monolog\Formatter\ColoredLineFormatter;
+use \Regho\Monolog\Formatter\ColorSchemes\TrafficLight;
 
 $log = new Logger('DEMO');
 $handler = new StreamHandler('php://stdout', Logger::WARNING);
@@ -85,10 +85,10 @@ Alternatively it's also possible to activate it using the `setColorScheme()` met
 
 ### Creating your own Custom Color Scheme
 
-To define your own color scheme make a class that implements the `\Bramus\Monolog\Formatter\ColorSchemes\ColorSchemeInterface` interface. To make things more easy a trait `ColorSchemeTrait` is defined.
+To define your own color scheme make a class that implements the `\Regho\Monolog\Formatter\ColorSchemes\ColorSchemeInterface` interface. To make things more easy a trait `ColorSchemeTrait` is defined.
 
 ```php
-namespace Bramus\Monolog\Formatter\ColorSchemes;
+namespace Regho\Monolog\Formatter\ColorSchemes;
 
 use Monolog\Logger;
 use Bramus\Ansi\Ansi;
@@ -126,18 +126,18 @@ class TrafficLight implements ColorSchemeInterface
 }
 ```
 
-Please refer to [the `bramus/ansi-php` documentation](https://github.com/bramus/ansi-php) to define your own styles and colors.
+Please refer to [the `Regho/ansi-php` documentation](https://github.com/Regho/ansi-php) to define your own styles and colors.
 
 ## Unit Testing
 
-`bramus/monolog-colored-line-formatter` ships with unit tests using [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
+`Regho/monolog-colored-line-formatter` ships with unit tests using [PHPUnit](https://github.com/sebastianbergmann/phpunit/).
 
 - If PHPUnit is installed globally run `phpunit` to run the tests.
 
 - If PHPUnit is not installed globally, install it locally through composer by running `composer install --dev`. Run the tests themselves by calling `vendor/bin/phpunit`.
 
-Unit tests are also automatically run [on GitHub Actions](https://github.com/bramus/monolog-colored-line-formatter/actions?query=workflow%3ACI)
+Unit tests are also automatically run [on GitHub Actions](https://github.com/Regho/monolog-colored-line-formatter/actions?query=workflow%3ACI)
 
 ## License
 
-`bramus/monolog-colored-line-formatter` is released under the MIT public license. See the enclosed `LICENSE.txt` for details.
+`Regho/monolog-colored-line-formatter` is released under the MIT public license. See the enclosed `LICENSE.txt` for details.

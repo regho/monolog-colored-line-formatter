@@ -1,14 +1,13 @@
 <?php
 
-namespace Bramus\Monolog\Formatter\ColorSchemes;
+namespace Regho\Monolog\Formatter\ColorSchemes;
 
 use Bramus\Ansi\Ansi;
 use Bramus\Ansi\Writers\BufferWriter;
 use Exception;
 use Monolog\Level;
 
-trait ColorSchemeTrait
-{
+trait ColorSchemeTrait {
     /**
      * ANSI Wrapper which provides colors
      * @var Ansi
@@ -24,8 +23,7 @@ trait ColorSchemeTrait
     /*
      * Constructor
      */
-    public function __construct()
-    {
+    public function __construct() {
         // Create Ansi helper
         $this->ansi = new Ansi(new BufferWriter());
     }
@@ -34,8 +32,7 @@ trait ColorSchemeTrait
      * Set the Color Scheme Array
      * @param array $colorScheme The Color Scheme Array
      */
-    public function setColorizeArray(array $colorScheme): void
-    {
+    public function setColorizeArray(array $colorScheme): void {
         // Only store entries that exist as Monolog\Logger levels
         $colorScheme = array_intersect_key($colorScheme, array_combine(Level::VALUES, Level::NAMES));
 
@@ -57,8 +54,7 @@ trait ColorSchemeTrait
      * @param  int    $level The Logger Level
      * @return string The Color Scheme String
      */
-    public function getColorizeString($level): string
-    {
+    public function getColorizeString($level): string {
         return $this->colorScheme[$level] ?? '';
     }
 
@@ -67,8 +63,7 @@ trait ColorSchemeTrait
      * @return string The reset string
      * @throws Exception
      */
-    public function getResetString(): string
-    {
+    public function getResetString(): string {
         return $this->ansi->reset()->get();
     }
 }

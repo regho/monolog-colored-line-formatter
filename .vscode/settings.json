@@ -1,0 +1,160 @@
+{
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": false
+    },
+    // Archivos de configuración ocultos
+    "files.exclude": {
+        "**/.clirc": true,
+        "**/.eslintrc": true,
+        "**/.nvmrc": true,
+        "**/.nycrc": true,
+        "**/.pylintrc": true,
+        "**/babel.config.js": true,
+        "**/commitlint.config.js": true,
+        "**/cspell.config.yaml": true,
+        "**/.venvrc": true,
+        "**/.gitignore": true,
+        "**/.dockerignore": true,
+        "**/.eslintignore": true,
+        "**/.mocharc.yaml": true,
+        "**/jsconfig.json": true,
+        // "**/Dockerfile": true,
+        "**/.stoplight.json": true,
+        "**/CHANGELOG.md": true,
+        "**/LICENSE.md": true,
+        "**/*-lock*": true,
+        "**/.gitlab-ci.yml": true,
+        "**/.husky": true,
+        "**/.yamllint.yml": true,
+        "**/gulpfile.js": true,
+        "**/.markdownlint.json": true,
+        "**/.dictionary.txt": true,
+        "*.regho": true,
+        "**/docs": true,
+        "**/venv": true,
+        "**/__pycache__": true
+    },
+    "templates.path": ".vscode/templates",
+    // Configuración restringida a cada lenguaje especificado
+    // Spellchecker
+    "cSpell.enabled": true,
+    "cSpell.language": "en,es",
+    "cSpell.allowCompoundWords": true,
+    "cSpell.diagnosticLevel": "Error",
+    "cSpell.suggestionMenuType": "quickFix",
+    "cSpell.ignorePaths": [
+        "package-lock.json",
+        "package.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/objects",
+        ".vscode/.cspell",
+        ".vscode/extensions.json",
+        ".vscode/settings.json",
+        ".vscode-insiders",
+        ".env",
+        ".env.example",
+        ".eslintrc",
+        ".prettierrc",
+        ".prettierignore",
+        ".eslintignore",
+        "commitlint.config.js",
+        "rollup.config.js",
+        "jsconfig.json",
+        ".jsdocs.json",
+        ".gitignore",
+        ".babelrc",
+        ".mocharc.yaml",
+        ".husky"
+    ],
+    "cSpell.customDictionaries": {
+        "dictionary": {
+            "name": "dictionary",
+            "path": "${workspaceFolder}/.dictionary.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    },
+    // Templates
+    // "templates.path": ".vscode/templates",
+    // Branch Warning
+    "branchwarnings.msgTooltip": "Esta rama se ha marcado como protegida, cree su propia rama para trabajar",
+    "branchwarnings.suppressPopup": false,
+    "branchwarnings.protectedBranches": [
+        "main",
+        "master",
+        "develop"
+    ],
+    // Gitignore
+    "gitignore.cacheExpirationInterval": 3600,
+    // ToDo's Tree
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "bookmark",
+        "type": "tag",
+        "foreground": "#FFFFFF",
+        "background": "#000000",
+        "opacity": 100,
+        "iconColour": "#FFFFFF"
+    },
+    "todo-tree.general.tags": [
+        "#TODO",
+        "#FIXME",
+        "#WARN",
+        "#UPGRADE",
+        "#ASK",
+        "#DEPRECATED"
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "#TODO": {
+            "icon": "check-circle",
+            "type": "tag",
+            "iconColour": "#caf0f8",
+            "foreground": "#caf0f8",
+            "background": "#023e8a"
+        },
+        "#FIXME": {
+            "icon": "bug",
+            "type": "whole-line",
+            "iconColour": "#e5383b",
+            "foreground": "#e5383b",
+            "background": "#660708"
+        },
+        "#WARN": {
+            "icon": "alert",
+            "type": "line",
+            "iconColour": "#ff6d00",
+            "foreground": "#ffea00",
+            "background": "#ff6d00"
+        },
+        "#UPGRADE": {
+            "icon": "arrow-up",
+            "type": "tag-and-subTag",
+            "iconColour": "#ffea00",
+            "foreground": "#bf3100",
+            "background": "#ffea00"
+        },
+        "#ASK": {
+            "icon": "question",
+            "type": "tag",
+            "iconColour": "#c8b8db",
+            "foreground": "#c8b8db",
+            "background": "#502f4c"
+        },
+        "#DEPRECATED": {
+            "icon": "x",
+            "type": "tag",
+            "iconColour": "#dcdcdd",
+            "foreground": "#dcdcdd",
+            "background": "#4c5c68"
+        }
+    },
+    // Commit Message Editor
+    "phpfmt.psr1": true,
+    "phpfmt.psr2": false,
+    "phpfmt.enable_auto_align": true,
+    "phpfmt.indent_with_space": true,
+}

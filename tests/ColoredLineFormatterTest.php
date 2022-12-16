@@ -2,7 +2,7 @@
 
 use Monolog\Logger;
 use Monolog\Level;
-use Bramus\Monolog\Formatter\ColoredLineFormatter;
+use Regho\Monolog\Formatter\ColoredLineFormatter;
 use Bramus\Ansi\Ansi;
 use Bramus\Ansi\Writers\BufferWriter;
 use Bramus\Ansi\ControlSequences\EscapeSequences\Enums\SGR;
@@ -22,7 +22,7 @@ class ColoredLineFormatterTest extends \PHPUnit\Framework\TestCase
 
     public function testInstantiation()
     {
-        $this->assertInstanceOf('\Bramus\Monolog\Formatter\ColoredLineFormatter', $this->clf);
+        $this->assertInstanceOf('\Regho\Monolog\Formatter\ColoredLineFormatter', $this->clf);
     }
 
     public function testReset()
@@ -32,7 +32,7 @@ class ColoredLineFormatterTest extends \PHPUnit\Framework\TestCase
 
     public function testDefaultColorScheme()
     {
-        $defaultScheme = new \Bramus\Monolog\Formatter\ColorSchemes\DefaultScheme();
+        $defaultScheme = new \Regho\Monolog\Formatter\ColorSchemes\DefaultScheme();
 
         $this->assertEquals(
             $this->clf->getColorScheme()->getColorizeArray(),
@@ -42,7 +42,7 @@ class ColoredLineFormatterTest extends \PHPUnit\Framework\TestCase
 
     public function testSetColorSchemeViaConstructor()
     {
-        $newScheme = new \Bramus\Monolog\Formatter\ColorSchemes\TrafficLight();
+        $newScheme = new \Regho\Monolog\Formatter\ColorSchemes\TrafficLight();
         $this->clf = new ColoredLineFormatter($newScheme);
 
         $this->assertEquals(
@@ -53,7 +53,7 @@ class ColoredLineFormatterTest extends \PHPUnit\Framework\TestCase
 
     public function testSetColorSchemeViaSetColorScheme()
     {
-        $newScheme = new \Bramus\Monolog\Formatter\ColorSchemes\TrafficLight();
+        $newScheme = new \Regho\Monolog\Formatter\ColorSchemes\TrafficLight();
         $this->clf->setColorScheme($newScheme);
 
         $this->assertEquals(

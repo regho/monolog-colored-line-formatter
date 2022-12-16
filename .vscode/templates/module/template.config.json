@@ -1,0 +1,10 @@
+{
+    "parameters": [
+        {
+            "name": "Define module name",
+            "description": "The module name",
+            "variable": "name",
+            "pattern": "[a-zA-Z0-9_]+"
+        }
+    ]
+}
