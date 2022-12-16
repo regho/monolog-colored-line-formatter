@@ -1,5 +1,5 @@
 {
-    "name": "bramus/monolog-colored-line-formatter",
+    "name": "regho/monolog-colored-line-formatter",
     "description": "Colored Line Formatter for Monolog",
     "license": "MIT",
     "authors": [
